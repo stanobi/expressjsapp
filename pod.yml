@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myexpressapp-pod
+spec:
+  containers:
+    - image: success4stan/myexpressapi
+      name: myexpressapp
+      imagePullPolicy: Never
+      resources: {}
+      ports:
+        - containerPort: 3000

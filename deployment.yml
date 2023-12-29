@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myexpressapp
+  name: myexpressapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myexpressapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myexpressapp
+    spec:
+      containers:
+      - image: success4stan/myexpressapi
+        name: myexpressapp
+        imagePullPolicy: Never
+        resources: {}
+        ports:
+          - containerPort: 3000 
+status: {}
